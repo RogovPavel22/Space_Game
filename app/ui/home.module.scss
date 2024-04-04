@@ -1,0 +1,9 @@
+.section {
+  height: 100vh;
+
+  &_intro {
+    height: 100vh;
+    background: url(/images/bg_1.jpeg) no-repeat center;
+    background-size: cover;
+  }
+}
