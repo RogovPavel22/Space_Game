@@ -1,0 +1,19 @@
+.title {
+  font-family: var(--font-ttOctosquares);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 1.8vw;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2.8571rem;
+  user-select: none;
+
+  &Medium {
+    font-size: 4.7143rem;
+    
+  }
+
+  &Large {
+    font-size: 5.7143rem;
+  }
+}

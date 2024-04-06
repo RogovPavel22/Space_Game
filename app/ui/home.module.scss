@@ -1,9 +1,31 @@
 .section {
   height: 100vh;
+  padding: 2.5357rem 3.5714rem 0 3.9286rem;
+  min-height: 500px;
 
   &_intro {
-    height: 100vh;
     background: url(/images/bg_1.jpeg) no-repeat center;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 2.2143rem;
+  position: absolute;
+  top: 2.5357rem;
+  left: 3.9286rem;
+  right: 3.5714rem;
+  z-index: 9;
+}
+
+.buttonList {
+  display: flex;
+  justify-content: center;
+  gap: 1.4286rem;
 }
