@@ -2,6 +2,7 @@ import { Logo } from "./ui/Logo";
 import { SocialNetworks } from "./ui/SocialNetworks";
 import { Button } from "./ui/Button";
 import { Title } from "./ui/Title";
+import { Navigation } from "./ui/Navigation";
 
 import clsx from "clsx";
 import styles from "./ui/home.module.scss";
@@ -19,7 +20,7 @@ export default function Home() {
           <SocialNetworks />
           <Button onClick={click}>Whitepaper</Button>
         </header>
-        {/* <Navigation /> */}
+        <Navigation />
         <div>
           <Title>From dusk to&nbsp;dawn</Title>
           <ul className={styles.buttonList}>
@@ -32,6 +33,12 @@ export default function Home() {
           </ul>
         </div>
       </section>
+      <section className={clsx(styles.section, styles.section_factions)}>
+        <Title size="Large">Factions</Title>
+      </section>
+      <section
+        className={clsx(styles.section, styles.section_roadMap)}
+      ></section>
     </>
   );
 }

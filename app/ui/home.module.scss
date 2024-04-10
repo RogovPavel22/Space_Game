@@ -1,14 +1,38 @@
 .section {
   height: 100vh;
-  padding: 2.5357rem 3.5714rem 0 3.9286rem;
-  min-height: 500px;
+  padding: 2.5357rem 6.5714rem 0 6.9286rem;
+  min-height: 600px;
 
   &_intro {
-    background: url(/images/bg_1.jpeg) no-repeat center;
+    background: url(/images/bg_1.jpg) no-repeat center;
+  }
+
+  &_factions {
+    background: url(/images/bg_2.jpg) no-repeat center;
+  }
+
+  &_intro,
+  &_factions {
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &_roadMap {
+    background: linear-gradient(to bottom, #1e202c 0%, #13151b 100%);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -150px;
+      left: 0;
+      height: 150px;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(30, 32, 44, 0) 0%, rgba(30, 32, 44, 1) 100%);
+      z-index: 0;
+    }
   }
 }
 
