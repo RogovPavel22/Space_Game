@@ -3,20 +3,33 @@
 import clsx from "clsx";
 import styles from "./style.module.scss";
 
+export type TypeArtButton =
+  | "BluePurple"
+  | "GreenYellow"
+  | "Blue"
+  | "YellowPink";
+
 interface ButtonProps {
   onClick: () => void;
   children: React.ReactNode;
   className?: string;
+  type?: TypeArtButton;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   onClick,
   children,
   className,
+  type,
 }) => {
   return (
     <button
-      className={clsx(styles.button, className)}
+      className={clsx(
+        styles.button,
+        className,
+        type && styles.buttonType,
+        type && styles[`button${type}`]
+      )}
       onClick={() => {
         onClick();
       }}

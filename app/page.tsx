@@ -3,6 +3,7 @@ import { SocialNetworks } from "./ui/SocialNetworks";
 import { Button } from "./ui/Button";
 import { Title } from "./ui/Title";
 import { Navigation } from "./ui/Navigation";
+import { ArtMenu } from "./ui/ArtMenu";
 
 import clsx from "clsx";
 import styles from "./ui/home.module.scss";
@@ -35,6 +36,7 @@ export default function Home() {
       </section>
       <section className={clsx(styles.section, styles.section_factions)}>
         <Title size="Large">Factions</Title>
+        <ArtMenu />
       </section>
       <section
         className={clsx(styles.section, styles.section_roadMap)}
