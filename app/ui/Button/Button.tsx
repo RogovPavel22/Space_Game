@@ -7,7 +7,9 @@ export type TypeArtButton =
   | "BluePurple"
   | "GreenYellow"
   | "Blue"
-  | "YellowPink";
+  | "YellowPink"
+  | "Transparent"
+  | "White";
 
 interface ButtonProps {
   onClick: () => void;

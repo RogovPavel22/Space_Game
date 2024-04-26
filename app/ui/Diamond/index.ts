@@ -1,1 +1,0 @@
-export { Diamond } from "./Diamond";

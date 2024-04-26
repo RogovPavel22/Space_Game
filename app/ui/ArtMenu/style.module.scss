@@ -69,6 +69,10 @@
     }
   }
 
+  &Title {
+    cursor: pointer;
+  }
+
   &Decorator {
     position: absolute;
     top: 0;
@@ -111,9 +115,23 @@
     position: absolute;
     left: 0;
     top: 10%;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &Image {
     display: block;
+  }
+}
+
+.cardList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+
+  *:nth-child(2n) {
+    transform: translateY(40px);
   }
 }

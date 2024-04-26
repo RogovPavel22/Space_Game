@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import clsx from "clsx";
 
 import { Button } from "../Button";
@@ -11,11 +10,11 @@ import styles from "./style.module.scss";
 
 interface ArtMenuItemProps {
   id: number;
-  href: string;
   image: string;
   title: string;
   isOpened: boolean;
   onClick: (e: React.MouseEvent) => void;
+  onClickButton: () => void;
 }
 
 const getTypeById = (id: number): TypeArtButton => {
@@ -36,15 +35,14 @@ const getTypeById = (id: number): TypeArtButton => {
 
 export const ArtMenuItem: React.FC<ArtMenuItemProps> = ({
   id,
-  href,
   image,
   title,
   isOpened,
   onClick,
+  onClickButton,
 }) => {
   return (
-    <Link
-      href={href}
+    <div
       className={clsx(styles.artMenuItem, isOpened && styles.artMenuItemActive)}
       onClick={onClick}
     >
@@ -52,7 +50,7 @@ export const ArtMenuItem: React.FC<ArtMenuItemProps> = ({
       <div className={clsx(styles.cardMore, styles.artMenuCard)}>
         <Button
           className={styles.cardMore_button}
-          onClick={() => {}}
+          onClick={onClickButton}
           type={getTypeById(id)}
         >
           More
@@ -66,6 +64,6 @@ export const ArtMenuItem: React.FC<ArtMenuItemProps> = ({
         />
       </div>
       <span className={styles.artMenuDecorator} />
-    </Link>
+    </div>
   );
 };
