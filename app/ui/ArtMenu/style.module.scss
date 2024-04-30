@@ -3,6 +3,7 @@
   grid-template-columns: 1fr;
   gap: 2.8rem;
   position: relative;
+  z-index: 1;
 
   &::after {
     content: "";
@@ -40,23 +41,23 @@
     }
 
     .artMenuDecorator {
-      background-image: url("./images/white_left_border.png");
+      background-image: url("/decorator/white_left_border.png");
     }
 
     &:hover {
       .artMenuDecorator {
-        background-image: url("./images/color_left_border.png");
+        background-image: url("/decorator/color_left_border.png");
       }
     }
 
     &:nth-child(odd) {
       .artMenuDecorator {
-        background-image: url("./images/white_right_border.png");
+        background-image: url("/decorator/white_right_border.png");
       }
 
       &:hover {
         .artMenuDecorator {
-          background-image: url("./images/color_right_border.png");
+          background-image: url("/decorator/color_right_border.png");
         }
       }
     }
@@ -87,12 +88,12 @@
 
   &ItemActive {
     .artMenuDecorator {
-      background-image: url("./images/color_left_border.png");
+      background-image: url("/decorator/color_left_border.png");
     }
 
     &:nth-child(odd) {
       .artMenuDecorator {
-        background-image: url("./images/color_right_border.png");
+        background-image: url("/decorator/color_right_border.png");
       }
     }
 

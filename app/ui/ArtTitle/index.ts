@@ -1,0 +1,1 @@
+export { ArtTitle } from "./ArtTitle";

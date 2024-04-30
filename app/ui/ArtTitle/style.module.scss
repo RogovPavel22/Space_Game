@@ -1,0 +1,20 @@
+.title {
+    display: inline-block;
+    font: 700 15px/1.2em var(--font-mazzard);
+    text-transform: uppercase;
+    text-align: right;
+
+    &Text {
+        background-image: linear-gradient(to right, #FFB800, #FFBAC3);
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+        padding-right: 10px;
+        line-height: 1;
+    }
+
+    &Border {
+        position: relative;
+        top: -2px;
+    }
+}
