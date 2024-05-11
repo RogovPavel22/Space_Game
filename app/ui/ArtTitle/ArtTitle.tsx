@@ -15,9 +15,14 @@ export const ArtTitle: React.FC<ArtTitleProps> = ({
   className,
 }) => {
   return (
-    <h3 className={clsx(styles.title, className)}>
+    <h3
+      className={clsx(
+        styles.title,
+        className,
+        type === "up" && styles.titleCenter
+      )}
+    >
       <span className={styles.titleText}>{children}</span>
-      <br />
       {type === "down" && (
         <svg
           width="160"
@@ -42,6 +47,28 @@ export const ArtTitle: React.FC<ArtTitleProps> = ({
             >
               <stop stopColor="#FFB800" />
               <stop offset="0.70625" stopColor="#FFBAC3" />
+            </linearGradient>
+          </defs>
+        </svg>
+      )}
+      {type === "up" && (
+        <svg width="123" height="12" fill="none" className={styles.titleBorder}>
+          <path
+            stroke="url(#a)"
+            strokeWidth="1.5"
+            d="m122.5 11-10-5.5h-37l-9-4.5H57l-7 4.5H25m-25 0h17"
+          />
+          <defs>
+            <linearGradient
+              id="a"
+              x1="122.5"
+              x2="0"
+              y1="6"
+              y2="6"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#FFB800" />
+              <stop offset=".706" stopColor="#FFBAC3" />
             </linearGradient>
           </defs>
         </svg>

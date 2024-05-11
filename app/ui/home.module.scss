@@ -77,6 +77,50 @@
       );
     }
   }
+
+  &_logos {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    height: auto;
+    background: linear-gradient(
+      to bottom,
+      #633e60 0%,
+      #705451 50%,
+      #32344b 100%
+    );
+  }
+
+  &DifficultForms {
+    background: linear-gradient(
+      to bottom,
+      #32344b 0%,
+      #4b3961 50%,
+      #4d2a32 100%
+    );
+    position: relative;
+    height: auto;
+    min-height: auto;
+    padding-bottom: 15rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: url("/bg/screen_art_object.png") center top no-repeat;
+      background-size: 100% auto;
+      z-index: 1;
+      opacity: 0.7;
+    }
+  }
+
+  &Content {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .header {
@@ -103,4 +147,19 @@
 
 .smallTitle {
   margin-bottom: 1em;
+}
+
+.subTitle {
+  text-align: center;
+  margin-bottom: 50px !important;
+}
+
+.logoList {
+  margin-bottom: 100px;
+}
+
+.superStar {
+  padding: 0 22px 0 11px;
+  position: relative;
+  top: 4px;
 }

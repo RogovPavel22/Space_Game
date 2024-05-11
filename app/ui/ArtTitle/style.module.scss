@@ -1,20 +1,27 @@
 .title {
+  display: inline-flex;
+  flex-direction: column;
+  font: 700 15px/1.2em var(--font-mazzard);
+  text-transform: uppercase;
+  text-align: right;
+  gap: 0.1em;
+
+  &Center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .titleText {
+      padding-right: 0;
+    }
+  }
+
+  &Text {
+    background-image: linear-gradient(to right, #ffb800, #ffbac3);
+    background-clip: text;
+    color: transparent;
     display: inline-block;
-    font: 700 15px/1.2em var(--font-mazzard);
-    text-transform: uppercase;
-    text-align: right;
-
-    &Text {
-        background-image: linear-gradient(to right, #FFB800, #FFBAC3);
-        background-clip: text;
-        color: transparent;
-        display: inline-block;
-        padding-right: 10px;
-        line-height: 1;
-    }
-
-    &Border {
-        position: relative;
-        top: -2px;
-    }
+    padding-right: 10px;
+    line-height: 1;
+  }
 }
